@@ -1,0 +1,40 @@
+{% extends "main.html" %}
+{% load static %}
+
+{% block title %}
+    Register
+{% endblock title %}
+
+{% block content %}
+    <section class="apply">
+    <div>
+        <h1>Register your Internship</h1>
+        <p>Provide additional Information below to be registered</p>
+    </div>
+    <div>
+        <form action="" class="apply_form" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+             <div>
+                <label for="intern_id">ID recieved via email from CivilSalt</label>
+                {{form.intern_id}}
+            </div>
+            <div>
+                <label for="name">Your Name</label>
+                {{form.name}}
+            </div>
+            <div>
+                <label for="momo_number">Your momo Number</label>
+                {{form.momo_number}}
+            </div>
+            <div>
+                <label for="amount">Amount</label>
+                {{form.amount}}
+            </div>
+             <div>
+                <img src="{% static 'base/imgs/momo.webp' %}" alt="momo icon" style="width: 50px;aspect-ratio: 1;border-radius: 10px;">
+            </div>
+            <button type="submit">click to pay with momo</button>
+        </form>
+    </div>
+</section>
+{% endblock content %}

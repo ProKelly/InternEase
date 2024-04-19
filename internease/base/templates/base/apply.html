@@ -1,0 +1,49 @@
+{% extends "main.html" %}
+{% load static %}
+
+{% block title %}
+application
+{% endblock title %}
+
+{% block content %}
+<section class="apply">
+    <div>
+        <h1>Apply For Internship</h1>
+        <p>Provide additional Information below, we will get in touch with you within 24 hours</p>
+    </div>
+    <div>
+        <form action="" class="apply_form" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div>
+                <label for="name">Your Name</label>
+                {{form.name}}
+            </div>
+            <div>
+                <label for="tel">Your Tel</label>
+                {{form.tel}}
+            </div>
+            <div>
+                <label for="email">Your Email</label>
+                {{form.email}}
+            </div>
+            <div>
+                <label for="school">Your school</label>
+                {{form.school}}
+            </div>
+            <div>
+                <label for="department">Your Departent</label>
+                {{form.department}}
+            </div>
+            <div>
+                <label for="support_leter">upload your internship support Document *.pdf only</label>
+                {{form.support_leter}}
+            </div>
+            <div>
+                <label for="photo">Your Photo</label>
+                {{form.photo}}
+            </div>
+            <button type="submit">Apply</button>
+        </form>
+    </div>
+</section>
+{% endblock content %}

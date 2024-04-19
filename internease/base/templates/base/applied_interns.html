@@ -1,0 +1,36 @@
+{% extends "main.html" %}
+
+{% block title %}
+    registered interns
+{% endblock title %}
+
+{% block content %}
+    <div class="interns">
+        {% for intern in interns %}
+          <div class="intern">
+            <div class="info">
+                <img src="{{intern.photo.url}}" alt="photo">
+                <div>
+                    <table  border="">
+                        <thead>
+                            <tr><th>Name</th><th>Tel</th><th>Email</th><th>School</th><th>Department</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><p>{{intern.name}}</p></td>
+                                <td><p>{{intern.tel}}</p></td>
+                                <td><p>{{intern.email}}</p></td>
+                                <td><p>{{intern.school}}</p></td>
+                                <td> <p><small>{{intern.department}}</small></p></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="support_letter">
+                <img src="{{intern.support_leter.url}}" alt="support letter">
+            </div>
+          </div>
+        {% endfor %}
+    </div>
+{% endblock content %}

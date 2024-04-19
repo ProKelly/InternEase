@@ -1,0 +1,95 @@
+
+.apply {
+    display: block;
+    margin: 1.5rem 0 0 15%;
+    height: 100%;
+    padding: 10px;
+}
+.apply > div h1{
+    margin: 0 0 0.5rem 0;
+}
+
+
+.apply .apply_form {
+    display: block;
+    width: 90%;
+    margin: 10px;
+    gap: 10px;
+}
+.apply .apply_form div  {
+    display: block;
+    margin: 1rem auto;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.apply .apply_form div input {
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    padding: 10px;
+    border: transparent solid var(--color-text);
+    background-color: rgba(220, 220, 220, 0.411);
+}
+.apply  .apply_form div input:focus {
+    outline: 1px solid var(--color-main);
+}
+
+.apply .apply_form button {
+    width: 200px;
+    padding: 10px 0;
+    background-color: var(--color-main);
+    color: white;
+    border: transparent;
+    border-radius: 5px;
+    margin: 10px 0 0 30%;
+    cursor: pointer;
+}
+
+
+
+/* Interns Page Design  */
+
+.interns {
+    margin: 1.5rem 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+@media(max-width:800px) {
+    .interns {
+        grid-template-columns: 1fr;
+    }
+}
+
+.interns .intern  {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    box-shadow: 1px 2px 4px var(--color-text);
+    padding: 10px;
+    border-radius: 10px;
+}
+@media(max-width:800px) {
+    .interns .intern {
+        grid-template-columns: 1fr;
+    }
+}
+
+.interns .intern .info img {
+    width: 100%;
+    height: 450px;
+    border-radius: 10px;
+}
+.interns .intern .info div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 1.5rem auto;
+}
+.interns .intern .support_letter img {
+    width: 100%;
+    height: 550px;
+}
